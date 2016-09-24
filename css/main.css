@@ -1,0 +1,137 @@
+@font-face {
+  font-family: Roboto, sans-serif;
+  src: url(../fonts/Roboto-Regular.ttf);
+  font-weight: normal; }
+@font-face {
+  font-family: Roboto, sans-serif;
+  src: url(../fonts/Roboto-Bold.ttf);
+  font-weight: bold; }
+@font-face {
+  font-family: Roboto, sans-serif;
+  src: url(../fonts/Roboto-Light.ttf);
+  font-weight: 200; }
+body {
+  font: 100%/1.5em Roboto, sans-serif normal;
+  color: #F4F7FC;
+  background-color: #000; }
+
+button {
+  outline: none;
+  border: 0;
+  box-shadow: none; }
+
+ul {
+  list-style: none; }
+
+a {
+  color: #E8AC2B; }
+
+a, a:hover {
+  text-decoration: none; }
+
+section#main {
+  background: url("../img/logo.png") no-repeat center 5rem;
+  position: relative;
+  margin: 5rem auto; }
+  section#main header {
+    width: 34rem;
+    margin: 0 auto; }
+    section#main header ul li button {
+      background: url("../img/tips.png") no-repeat;
+      width: 76px;
+      height: 58px;
+      float: left; }
+    section#main header ul li button#half {
+      background-position: -78px 0; }
+    section#main header ul li button#half:hover {
+      background-position: -77px -63px; }
+    section#main header ul li button#call {
+      background-position: -154px 0; }
+    section#main header ul li button#call:hover {
+      background-position: -153px -63px; }
+    section#main header ul li button#helpHall {
+      background-position: -2px 0; }
+    section#main header ul li button#helpHall:hover {
+      background-position: -2px -63px; }
+  section#main main {
+    padding: 0 10rem; }
+    section#main main ul#answer, section#main main div#question {
+      font-size: 1.5em; }
+    section#main main div#question {
+      background: url(../img/question_bg.png) no-repeat -16px -1px;
+      height: 84px;
+      text-align: center;
+      width: 100%;
+      margin-top: 47rem; }
+      section#main main div#question p {
+        padding-top: 3rem; }
+    section#main main ul#answer {
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      width: 73rem; }
+      section#main main ul#answer button, section#main main ul#answer .selectedAnswer, section#main main ul#answer .correctAnswer {
+        background: url(../img/anwser.png) no-repeat;
+        color: #F4F7FC; }
+      section#main main ul#answer button {
+        color: #E8AC2B;
+        width: 337px;
+        height: 39px;
+        background-position: 0 0; }
+        section#main main ul#answer button span {
+          padding-left: 0.5rem;
+          color: #F4F7FC; }
+      section#main main ul#answer .selectedAnswer, section#main main ul#answer button:hover {
+        background-position: 0 -39px;
+        color: #000; }
+      section#main main ul#answer .correctAnswer, section#main main ul#answer .correctAnswer:hover {
+        background-position: 0 -78px;
+        color: #000; }
+      section#main main ul#answer li {
+        margin: 1rem 0; }
+        section#main main ul#answer li a {
+          background: url("../img/anwser.png") no-repeat 0 0;
+          padding: 0.8rem 16rem 0.8rem 2rem; }
+  section#main aside {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    font-weight: bold;
+    width: 180px; }
+    section#main aside .currentCategory {
+      background: url(../img/money_bg.png) no-repeat;
+      color: #000; }
+      section#main aside .currentCategory span.step {
+        color: #F4F7FC; }
+    section#main aside button {
+      text-align: center; }
+    section#main aside ul {
+      text-align: center; }
+      section#main aside ul li:nth-last-of-type(5n) {
+        color: #F4F7FC; }
+      section#main aside ul li {
+        width: 173px;
+        height: 19px;
+        color: #E8AC2B; }
+        section#main aside ul li a span.step {
+          padding-right: 3rem; }
+
+#message-window {
+  position: fixed;
+  top: -100px;
+  width: 300px;
+  background-color: #F44336;
+  color: #fff;
+  text-align: center;
+  left: 50%;
+  margin-left: -150px;
+  font-size: 18px;
+  z-index: 5;
+  padding: 21px 0;
+  cursor: default;
+  opacity: 0; }
+  #message-window.success {
+    background-color: #4caf50; }
+
+/*# sourceMappingURL=main.css.map */

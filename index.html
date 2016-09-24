@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кто хочет стать миллионером?</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+   <section id="main" class="container">
+       <header>
+           <ul>
+               <li><button id="helpHall" data-bind="click: sendTips('helpHall')"></button></li>
+               <li><button id="call" data-bind="click: sendTips('call')"></button></li>
+               <li><button id="half" data-bind="click: sendTips('half')"></button></li>
+           </ul>
+       </header>
+     <main class="row">
+         <div id="question" class="col-lg-12">
+            <p data-bind="text: currentQuestion().title"></p>
+         </div>
+         <ul id="answer" class="row">
+           <li class="col-lg-6 col-md-6"><button id="answerA" data-bind="click: sendAnswer('A')">A:<span data-bind="text: currentQuestion().answers.A"></span></button></li>
+           <li class="col-lg-6 col-md-6"><button id="answerB" data-bind="click: sendAnswer('B')">B:<span data-bind="text: currentQuestion().answers.B"></span></button></li>
+           <li class="col-lg-6 col-md-6"><button id="answerC" data-bind="click: sendAnswer('C')">C:<span data-bind="text: currentQuestion().answers.C"></span></button></li>
+           <li class="col-lg-6 col-md-6"><button id="answerD" data-bind="click: sendAnswer('D')">D:<span data-bind="text: currentQuestion().answers.D"></span></button></li>
+         </ul>
+     </main>
+      <aside>
+          <ul data-bind="foreach: moneyArray">
+              <li data-bind="css: { currentCategory: $data.id == $root.currentStepFormat(), nSum: $data.nSum }">
+                  <span class="step" data-bind="text: $data.id" style="margin-right: 10px;min-width: 35px; display: inline-block;text-align: right"></span>
+                  <span class="money" data-bind="text: $data.money" style="min-width: 80px;display: inline-block;text-align: left"></span>
+              </li>
+          </ul>
+      </aside>
+   </section>
+    <div id="message-window" class="success">
+        <span>Game Over</span>
+    </div>
+  </body>
+  <script type="text/javascript" src="lib/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/knockout-min-3.4.0.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>
